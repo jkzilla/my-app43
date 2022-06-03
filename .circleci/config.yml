@@ -6,6 +6,7 @@ jobs:
       - image: circleci/node:9.8.0-stretch-browsers
     steps:
       - checkout
+      - checkout
       - setup_remote_docker:
           docker_layer_caching: true
       - run: docker build -t my-test-image:latest -f Dockerfile.test .
